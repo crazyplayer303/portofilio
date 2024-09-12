@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoShop - Sustainable Products</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #2E8B57 3px solid;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+            padding: 20px 0;
+        }
+        .product {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product h3 {
+            margin: 10px 0;
+        }
+        .product .price {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            background: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #2E8B57;
+        }
+        @media(max-width: 768px) {
+            header #branding,
+            header nav,
+            header nav li {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+            header {
+                padding-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>EcoShop</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Our Sustainable Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://personalisedfavours.com.au/cdn/shop/products/engraved-wooden-toothbrush-1_1_1197x1197.jpg?v=1677652274" alt="Eco-friendly Bamboo Toothbrush">
+                <h3>Eco-friendly Bamboo Toothbrush</h3>
+                <p class="price">$5.99</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://au.womensbest.com/cdn/shop/products/EcoBottle_a_700x700_crop_bottom@2x.jpg?v=1683120373" alt="Eco-friendly Water Bottle">
+                <h3>Eco-friendly Water Bottle</h3>
+                <p class="price">$20.99</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://www.koch.com.au/image/large/240137BK.jpg" alt="Reusable Shopping Bag">
+                <h3>Reusable Shopping Bag</h3>
+                <p class="price">$12.99</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add to cart functionality would go here
+        const addToCartButtons = document.querySelectorAll('.btn');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Product added to cart!');
+            });
+        });
+    </script>
+</body>
+</html>

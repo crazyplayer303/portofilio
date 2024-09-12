@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Googol - Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #202124;
+            color: #e8eaed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header, footer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+        .header-left a, .header-right a, footer a {
+            color: #e8eaed;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        #logo {
+            font-size: 92px;
+            margin-bottom: 20px;
+        }
+        #search-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 584px;
+        }
+        #search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #303134;
+            border-radius: 24px;
+            padding: 10px;
+            width: 100%;
+            max-width: 584px;
+        }
+        #search-bar input {
+            flex-grow: 1;
+            border: none;
+            background: none;
+            color: #e8eaed;
+            font-size: 16px;
+            padding: 5px;
+            outline: none;
+        }
+        #search-bar .icon {
+            margin: 0 10px;
+            color: #9aa0a6;
+        }
+        .search-buttons {
+            margin-top: 20px;
+        }
+        .search-buttons input {
+            background-color: #303134;
+            color: #e8eaed;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-buttons input:hover {
+            background-color: #3c4043;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+        .header-right i, .header-right img {
+            margin-left: 15px;
+        }
+        footer {
+            flex-wrap: wrap;
+        }
+        @media (max-width: 600px) {
+            #search-bar, #search-form {
+                width: 90%;
+            }
+            #logo {
+                font-size: 72px;
+            }
+            footer {
+                flex-direction: column;
+                align-items: center;
+            }
+            footer > div {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="#">About</a>
+            <a href="#">Store</a>
+        </div>
+        <div class="header-right">
+            <a href="#">Gmail</a>
+            <a href="#">Images</a>
+            <i class="fas fa-th"></i>
+            <img src="/api/placeholder/32/32" alt="Profile" width="32" height="32">
+        </div>
+    </header>
+
+    <main>
+        <div id="logo">Googol</div>
+
+        <form id="search-form" action="https://www.google.com/search" method="GET">
+            <div id="search-bar">
+                <i class="fas fa-search icon"></i>
+                <input type="text" name="q" placeholder="Search Googol or type a URL">
+                <i class="fas fa-microphone icon"></i>
+                <i class="fas fa-camera icon"></i>
+            </div>
+            <div class="search-buttons">
+                <input type="submit" value="Googol Search">
+                <input type="button" value="I'm Feeling Lucky">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div>Australia</div>
+        <div>
+            <a href="#">Advertising</a>
+            <a href="#">Business</a>
+            <a href="#">How Search works</a>
+        </div>
+        <div>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Settings</a>
+        </div>
+    </footer>
+</body>
+</html>
